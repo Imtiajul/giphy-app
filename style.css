@@ -1,0 +1,126 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+img {
+  border: 0;
+  height: auto;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+  width: auto;
+}
+html {
+  font-size: 62.5%;
+  box-shadow: border-box;
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+.container-grid {
+  display: grid;
+  grid-template-rows: 8rem min-content min-content 20rem;
+  grid-template-columns: [full-start] minmax(2rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 18rem) [col-end]
+    ) [center-end] minmax(2rem, 1fr) [full-end];
+    position: relative;
+}
+.container {
+   grid-column: center-start / center-end;
+}
+header {
+   display: grid;
+   grid-column: full-start / full-end;
+   background-color: #4682a9;
+   position: sticky;
+   top: 0;
+   left: 0;
+   z-index: 9999;
+   padding: 1.5rem;
+
+}
+header .center {
+   align-self: center;
+  justify-self: center;
+
+}
+header .center div {
+   font-size: 3.5rem;
+   color: #f5f5f5;
+   font-weight: bold;
+}
+footer {
+   display: grid;
+   grid-column: full-start / full-end;
+   background-color: #dd6f40;
+}
+.welcome {
+  display: grid;
+  grid-column: center-start / center-end;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5rem;
+}
+.welcome form {
+   align-self: center;
+}
+.welcome form label {
+   font-size: 1.8rem;
+   margin-right: 1rem;
+   color: #4682a9;
+   font-weight: 600;
+}
+.welcome form input {
+   padding: 1rem;
+   border-radius: 25px;
+   border: 1px solid #4682a9;
+}
+.welcome form input:focus {
+  outline: 1px solid #efefef;
+}
+.welcome form button {
+   padding: 1rem 5rem;
+   border-radius: .5rem;
+   color: #fff;
+   font-weight: bold;
+   border: 1px solid #4682a9;
+   background-color: #4682a9;
+   margin-left: 1rem;
+}
+.giphies-section {
+  display: grid;
+  grid-column: center-start / center-end;
+}
+.giphies {
+  display: grid;
+  grid-column: center-start / center-end;
+  padding: 5rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 5rem;
+}
+.giphies h2 {
+  grid-column: center-start / center-end;
+  justify-self: center;
+}
+
+.center-all {
+   align-self: center;
+   justify-self: center;
+   color: #fff;
+}
+.center-all h2 {
+   font-size: 2.5rem;  
+}
+.center-all p {
+   font-size: 1.8rem;
+}
+.center-all a {
+   color: #1d2322;
+}
